@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         scale = resources.displayMetrics.density
 
-        ObjectAnimator.ofFloat(droidImageView, "translationY", 100f * scale ).apply {
+        ObjectAnimator.ofFloat(dollarImageView, "translationY", 100f * scale ).apply {
             duration = 2000
             start()
         }

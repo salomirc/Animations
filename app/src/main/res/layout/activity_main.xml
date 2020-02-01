@@ -33,10 +33,11 @@
 
     <ImageView
         android:id="@+id/dollarImageView"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_marginTop="24dp"
         android:tint="#673AB7"
+        android:translationY="200dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -49,6 +50,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
         android:text="My Button"
+        android:translationX="100dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
