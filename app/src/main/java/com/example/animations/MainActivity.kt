@@ -52,8 +52,11 @@ class MainActivity : AppCompatActivity() {
             linearLayout.addView(TextView(this).apply {
                 text = "AAA"
                 setBackgroundColor(Color.GREEN)
-                val height = 50 * scale
-                layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, (height.toInt())).apply {
+                textSize = 30f
+
+//                val height = 50 * scale
+//                layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, (height.toInt())).apply {
+                layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT).apply {
                     setMargins(0, 0, 0, 10)
                     gravity = Gravity.CENTER_HORIZONTAL
                 }
