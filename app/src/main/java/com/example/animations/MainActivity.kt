@@ -1,5 +1,6 @@
 package com.example.animations
 
+import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -16,9 +17,19 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         scale = resources.displayMetrics.density
+        droidImageView.translationX = -100f
 
-        ObjectAnimator.ofFloat(dollarImageView, "translationY", 100f * scale ).apply {
+        val animTrans = ObjectAnimator.ofFloat(droidImageView, "translationY", 100f * scale ).apply {
             duration = 2000
+        }
+
+        val animFade = ObjectAnimator.ofFloat(droidImageView, "alpha", 1f, 0f).apply {
+            duration = 2000
+        }
+
+        AnimatorSet().apply {
+//            play(animTrans).before(animFade)
+            play(animTrans).with(animFade)
             start()
         }
 
