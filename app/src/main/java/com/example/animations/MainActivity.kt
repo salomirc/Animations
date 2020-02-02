@@ -2,9 +2,14 @@ package com.example.animations
 
 import android.animation.AnimatorSet
 import android.animation.ObjectAnimator
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
+import androidx.core.view.marginBottom
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -42,7 +47,14 @@ class MainActivity : AppCompatActivity() {
 
         myButton.setOnClickListener {
             toggle = !toggle
-            if (toggle) translateY(myButton, 100f) else translateY(myButton, 0f)
+            if (toggle) translateY(myButton, -100f) else translateY(myButton, 0f)
+            linearLayout.addView(TextView(this).apply {
+                text = "AAA"
+                setBackgroundColor(Color.GREEN)
+                layoutParams = LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT, 50).apply {
+                    setMargins(0, 0, 0, 10)
+                }
+            }, 0)
         }
 
     }
