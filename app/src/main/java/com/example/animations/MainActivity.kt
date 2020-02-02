@@ -23,13 +23,20 @@ class MainActivity : AppCompatActivity() {
             duration = 2000
         }
 
+        val animScaleX = ObjectAnimator.ofFloat(droidImageView, "scaleX", 1f, 2f).apply {
+            duration = 2000
+        }
+
+        val animScaleY = ObjectAnimator.ofFloat(droidImageView, "scaleY", 1f, 2f).apply {
+            duration = 2000
+        }
+
         val animFade = ObjectAnimator.ofFloat(droidImageView, "alpha", 1f, 0f).apply {
             duration = 2000
         }
 
         AnimatorSet().apply {
-//            play(animTrans).before(animFade)
-            play(animTrans).with(animFade)
+            play(animTrans).with(animScaleX).with(animScaleY).before(animFade)
             start()
         }
 
