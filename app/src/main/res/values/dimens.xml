@@ -3,4 +3,5 @@
     <dimen name="droid_translationX">-100dp</dimen>
     <dimen name="droid_translationY">100dp</dimen>
     <dimen name="dynamic_text_view_height">50dp</dimen>
+    <dimen name="my_text_size">24sp</dimen>
 </resources>

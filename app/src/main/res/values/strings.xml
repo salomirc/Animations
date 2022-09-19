@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Animations</string>
+    <string name="my_text_view_txt">Watch out ! A new <b>BB8</b> droid!</string>
 </resources>

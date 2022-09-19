@@ -5,6 +5,7 @@ import android.animation.ObjectAnimator
 import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
+import android.util.TypedValue
 import android.view.Gravity
 import android.view.View
 import android.widget.LinearLayout
@@ -48,9 +49,9 @@ class MainActivity : AppCompatActivity() {
             if (toggle) translateY(myButton, -100f) else translateY(myButton, 0f)
             linearLayout.addView(
                 TextView(this).apply {
-                    text = "AAA"
+                    text = resources.getText(R.string.my_text_view_txt)
                     setBackgroundColor(Color.GREEN)
-                    textSize = 30f
+                    setTextSize(TypedValue.COMPLEX_UNIT_PX, resources.getDimension(R.dimen.my_text_size))
                     val height = resources.getDimensionPixelSize(R.dimen.dynamic_text_view_height)
 
                     layoutParams = LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, height).apply {
